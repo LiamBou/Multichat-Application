@@ -11,8 +11,8 @@ public class SuperSocket {
     SuperSocket(Socket socket){
         this.socket = socket;
         try {
-            this.ins = new DataInputStream(socket.getInputStream());
             this.outs = new DataOutputStream(socket.getOutputStream());
+            this.ins = new DataInputStream(socket.getInputStream());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
